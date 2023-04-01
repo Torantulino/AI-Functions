@@ -3,7 +3,7 @@ import openai
 def ai_function(function, args, description, model = "gpt-4"):
     # parse args to comma seperated string
     args = ", ".join(args)
-    messages = [{"role": "system", "content": f"You are now the following python function: ```# {description}\n{function}```\n\nOnly respond with your `return` value."},{"role": "user", "content": args}]
+    messages = [{"role": "system", "content": f"You are now the following python function: ```# {description}\n{function}```\n\nOnly respond with your `return` value. no verbose, no chat."},{"role": "user", "content": args}]
 
     response = openai.ChatCompletion.create(
         model=model,
