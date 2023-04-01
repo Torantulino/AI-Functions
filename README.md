@@ -79,7 +79,3 @@ The test script will output the results of each test case and provide a success 
 ## Contributing
 
 Contributions are welcome! If you would like to add more test cases or improve the existing code, please feel free to submit a pull request.
-
-## License
-
-This project is released under the [MIT License](https://opensource.org/licenses/MIT).
