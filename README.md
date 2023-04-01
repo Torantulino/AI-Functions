@@ -1,4 +1,4 @@
-# Super Simple AI Functions 🤖👩‍💻
+# AI Functions 🤖👩‍💻
 
 Example:
 
