@@ -1,5 +1,16 @@
 # Super Simple AI Functions
 
+Example:
+
+```python
+function = "def add(a: int, b: int) -> int:"
+args = ["5", "7"]
+description = "Adds two integers."
+
+result = ai_functions.ai_function(function, args, description)
+print(result)  # Output: 12
+```
+
 An easy-to-use implementation of AI functions using OpenAI's GPT-4 (or any other model version) to perform various tasks. This project is heavily inspired by [Ask Marvin](https://www.askmarvin.ai/).
 
 ## Installation
