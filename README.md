@@ -65,9 +65,9 @@ The table below shows the success rate of the AI functions with different GPT mo
 | Description               | GPT-4 Result | GPT-3.5-turbo Result | Reason |
 |---------------------------|--------------|----------------------|--------|
 | Generate fake people      | PASSED       | FAILED               | Incorrect response format |
-| Generate Random Password  | PASSED       | FAILED               | Incorrect response format |
+| Generate Random Password  | FAILED       | FAILED               | Incorrect response format |
 | Calculate area of triangle| FAILED       | FAILED               | Incorrect float value (GPT-4), Incorrect response format (GPT-3.5-turbo) |
-| Calculate the nth prime number | PASSED  | FAILED               | Incorrect response format |
+| Calculate the nth prime number | PASSED  | PASSED               | N/A    |
 | Encrypt text              | PASSED       | PASSED               | N/A    |
 | Find missing numbers      | PASSED       | PASSED               | N/A    |
 
