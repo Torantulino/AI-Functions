@@ -3,12 +3,19 @@
 Example:
 
 ```python
-function = "def add(a: int, b: int) -> int:"
-args = ["5", "7"]
-description = "Adds two integers."
+function = "def fake_people(n: int) -> list[dict]:"
+args = ["4"]
+description_string = """Generates n examples of fake data representing people, each with a name and an age."""
 
-result = ai_functions.ai_function(function, args, description)
-print(result)  # Output: 12
+result = ai_functions.ai_function(function_string, args, description_string, model)
+
+""" Output: [
+  {"name": "John Doe", "age": 35},
+  {"name": "Jane Smith", "age": 28},
+  {"name": "Alice Johnson", "age": 42},
+  {"name": "Bob Brown", "age": 23}
+]"""
+
 ```
 
 An easy-to-use implementation of AI functions using OpenAI's GPT-4 (or any other model version) to perform various tasks. This project is heavily inspired by [Ask Marvin](https://www.askmarvin.ai/).
