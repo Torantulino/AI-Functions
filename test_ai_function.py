@@ -61,7 +61,6 @@ def test_1(model):
         result = json.loads(result_string)
     except Exception as e:
         # If the result can't be parsed as a list of dictionaries, the test fails
-        print(e)
         assert False
     
     # Assert the length of the result is equal to the number of people requested
@@ -168,5 +167,5 @@ def test_6(model):
     print("Testing if the result list contains the expected missing numbers...")
     assert result_list == expected_missing_numbers
 
-# run_tests("gpt-4")
+run_tests("gpt-4")
 run_tests("gpt-3.5-turbo")
