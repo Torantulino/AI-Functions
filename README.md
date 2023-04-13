@@ -89,7 +89,7 @@ In conclusion, while AI Functions can be helpful in various scenarios, they may 
 `test_ai_functions.py` contains test cases for the `ai_function`. To run the tests, execute the script with Python:
 
 ```bash
-python test_ai_function.py
+python test_ai_functions.py
 ```
 
 The test script will output the results of each test case and provide a success rate.
