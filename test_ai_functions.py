@@ -27,9 +27,7 @@ def run_tests(model):
 
     i = 0
     for test in test_functions:
-        print(
-            f"=-=-=- Running test: {test.__name__} - {test_names[i]} with model {model} -=-=-="
-        )
+        print(f"=-=-=- Running test: {test.__name__} - {test_names[i]} with model {model} -=-=-=")
         i += 1
         try:
             test(model)
@@ -44,9 +42,7 @@ def run_tests(model):
     print(f"Total tests: {len(test_functions)}")
 
     # Print the number of failed tests
-    print(
-        f"Success Rate: {len(test_functions) - len(failed_tests)}/{len(test_functions)}"
-    )
+    print(f"Success Rate: {len(test_functions) - len(failed_tests)}/{len(test_functions)}")
 
 
 # Ai function test 1
@@ -56,9 +52,7 @@ def test_1(model):
     description_string = """Generates n examples of fake data representing people,
             each with a name and an age."""
 
-    result_string = ai_functions.ai_function(
-        function_string, args, description_string, model
-    )
+    result_string = ai_functions.ai_function(function_string, args, description_string, model)
 
     print(f"Output: {result_string}")
     # Assert the result can be parsed as is a list of dictionaries
@@ -74,9 +68,7 @@ def test_1(model):
         assert False
 
     # Assert the length of the result is equal to the number of people requested
-    print(
-        "Testing if the length of the result is equal to the number of people requested..."
-    )
+    print("Testing if the length of the result is equal to the number of people requested...")
     if result:
         assert len(result) == int(args[0])
     else:
@@ -90,32 +82,22 @@ def test_2(model):
     description_string = """Generates a random password of given length with or
             without special characters."""
 
-    result_string = ai_functions.ai_function(
-        function_string, args, description_string, model
-    )
+    result_string = ai_functions.ai_function(function_string, args, description_string, model)
 
     print(f"Output: {result_string}")
 
     # Assert the length of the result is equal to the length requested
-    print(
-        "Testing if the length of the result is equal to the length requested..."
-    )
+    print("Testing if the length of the result is equal to the length requested...")
     assert len(result_string) == int(args[0])
 
 
 # Ai function test 3
 def test_3(model):
-    function_string = (
-        "def calculate_area_of_triangle(base: float, height: float) -> float:"
-    )
+    function_string = "def calculate_area_of_triangle(base: float, height: float) -> float:"
     args = ["15", "6.5"]
-    description_string = (
-        """Calculates the area of a triangle given its base and height."""
-    )
+    description_string = """Calculates the area of a triangle given its base and height."""
 
-    result_string = ai_functions.ai_function(
-        function_string, args, description_string, model
-    )
+    result_string = ai_functions.ai_function(function_string, args, description_string, model)
     print(f"Output: {result_string}")
 
     # Assert the result can be parsed as a float
@@ -141,9 +123,7 @@ def test_4(model):
     args = ["10"]
     description_string = """Finds and returns the nth prime number."""
 
-    result_string = ai_functions.ai_function(
-        function_string, args, description_string, model
-    )
+    result_string = ai_functions.ai_function(function_string, args, description_string, model)
 
     print(f"Output: {result_string}")
 
@@ -171,9 +151,7 @@ def test_5(model):
     description_string = """Encrypts the given text using a simple character
             substitution based on the provided key."""
 
-    result_string = ai_functions.ai_function(
-        function_string, args, description_string, model
-    )
+    result_string = ai_functions.ai_function(function_string, args, description_string, model)
 
     print(f"Output: {result_string}")
 
@@ -184,15 +162,11 @@ def test_5(model):
 
 # Ai function test 6
 def test_6(model):
-    function_string = (
-        "def find_missing_numbers_in_list(numbers: list[int]) -> list[int]:"
-    )
+    function_string = "def find_missing_numbers_in_list(numbers: list[int]) -> list[int]:"
     args = ["[3, 5, 8, 15, 16]"]
     description_string = """Finds and returns a list of missing numbers in a given sorted list."""
 
-    result_string = ai_functions.ai_function(
-        function_string, args, description_string, model
-    )
+    result_string = ai_functions.ai_function(function_string, args, description_string, model)
 
     print(f"Output: {result_string}")
 
@@ -207,9 +181,7 @@ def test_6(model):
 
     # Assert the result list contains the expected missing numbers
     expected_missing_numbers = [4, 6, 7, 9, 10, 11, 12, 13, 14]
-    print(
-        "Testing if the result list contains the expected missing numbers..."
-    )
+    print("Testing if the result list contains the expected missing numbers...")
     assert result_list == expected_missing_numbers
 
 

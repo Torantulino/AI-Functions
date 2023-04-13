@@ -14,8 +14,6 @@ def ai_function(function, args, description, model="gpt-4"):
         {"role": "user", "content": args},
     ]
 
-    response = openai.ChatCompletion.create(
-        model=model, messages=messages, temperature=0
-    )
+    response = openai.ChatCompletion.create(model=model, messages=messages, temperature=0)
 
     return response.choices[0].message["content"]

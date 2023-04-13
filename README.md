@@ -96,10 +96,13 @@ The test script will output the results of each test case and provide a success 
 
 ### Code Formatting
 
-1. Install black `pip install black` and run it with `black -l 100 ai_functions.py test_ai_function.py`
-2. Install isort `pip install isort` and run it with `isort ai_functions.py test_ai_function.py`
-3. Install flake8 `pip install flake8` and run it with `flake --max-line-length=100 ai_functions.py test_ai_function.py`
+1. Install black `pip install black` and run it with `black -l 100 ai_functions.py test_ai_functions.py`
+2. Install isort `pip install isort` and run it with `isort ai_functions.py test_ai_functions.py`
+3. Install flake8 `pip install flake8` and run it with `flake8 --max-line-length=100 ai_functions.py test_ai_functions.py`
 
+Alternatively:
+1. you can run `make format-code` to apply `black` and `isort`
+2. you can run `make check-code` to apply `flake8`
 
 ## Contributing
 
