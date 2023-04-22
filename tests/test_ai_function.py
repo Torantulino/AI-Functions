@@ -1,7 +1,7 @@
 import ast
 import json
 import time
-import ai.ai_functions as ai_functions
+import ai.functions as functions
 import pytest
 import openai
 from dotenv import load_dotenv
@@ -52,7 +52,7 @@ def test_1(model):
     description_string = """Generates n examples of fake data representing people, 
             each with a name and an age."""
 
-    result_string = ai_functions.ai_function(function_string, args, description_string, model)
+    result_string = functions.ai_function(function_string, args, description_string, model)
 
     print(f"Output: {result_string}")
     # Assert the result can be parsed as is a list of dictionaries
@@ -81,7 +81,7 @@ def test_2(model):
     args = ["12", "True"]
     description_string = """Generates a random password of given length with or without special characters."""
 
-    result_string = ai_functions.ai_function(function_string, args, description_string, model)
+    result_string = functions.ai_function(function_string, args, description_string, model)
 
     print(f"Output: {result_string}")
 
@@ -96,7 +96,7 @@ def test_3(model):
     args = ["15", "6.5"]
     description_string = """Calculates the area of a triangle given its base and height."""
 
-    result_string = ai_functions.ai_function(function_string, args, description_string, model)
+    result_string = functions.ai_function(function_string, args, description_string, model)
     print(f"Output: {result_string}")
 
     # Assert the result can be parsed as a float
@@ -119,7 +119,7 @@ def test_4(model):
     args = ["10"]
     description_string = """Finds and returns the nth prime number."""
 
-    result_string = ai_functions.ai_function(function_string, args, description_string, model)
+    result_string = functions.ai_function(function_string, args, description_string, model)
 
     print(f"Output: {result_string}")
 
@@ -143,7 +143,7 @@ def test_5(model):
     args = ["'Hello, World!'", "'abc123'"]
     description_string = """Encrypts the given text using a simple character substitution based on the provided key."""
 
-    result_string = ai_functions.ai_function(function_string, args, description_string, model)
+    result_string = functions.ai_function(function_string, args, description_string, model)
 
     print(f"Output: {result_string}")
 
@@ -158,7 +158,7 @@ def test_6(model):
     args = ["[3, 5, 8, 15, 16]"]
     description_string = """Finds and returns a list of missing numbers in a given sorted list."""
 
-    result_string = ai_functions.ai_function(function_string, args, description_string, model)
+    result_string = functions.ai_function(function_string, args, description_string, model)
 
     print(f"Output: {result_string}")
 
