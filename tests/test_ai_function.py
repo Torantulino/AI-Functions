@@ -13,6 +13,7 @@ openai.api_key = environ.get("OPENAI_API_KEY")
 
 # Run all tests, print the results, and return the number of failed tests
 def run_tests(model):
+    """Runs all tests and prints the results. Returns the number of failed tests."""
     test_functions = [test_1, test_2, test_3, test_4, test_5, test_6]
     test_names = [
         "Generate fake people",
@@ -45,6 +46,7 @@ def run_tests(model):
 
 # Ai function test 1
 def test_1(model):
+    """Generates n examples of fake data representing people, each with a name and an age."""
     function_string = "def fake_people(n: int) -> list[dict]:"
     args = ["4"]
     description_string = """Generates n examples of fake data representing people, 
@@ -74,6 +76,7 @@ def test_1(model):
 
 # Ai function test 2
 def test_2(model):
+    """Generates a random password of given length with or without special characters."""
     function_string = "def random_password_generator(length: int, special_chars: bool) -> str:"
     args = ["12", "True"]
     description_string = """Generates a random password of given length with or without special characters."""
@@ -88,6 +91,7 @@ def test_2(model):
 
 # Ai function test 3
 def test_3(model):
+    """Calculates the area of a triangle given its base and height."""
     function_string = "def calculate_area_of_triangle(base: float, height: float) -> float:"
     args = ["15", "6.5"]
     description_string = """Calculates the area of a triangle given its base and height."""
@@ -110,6 +114,7 @@ def test_3(model):
 
 # Ai function test 4
 def test_4(model):
+    """Finds and returns the nth prime number."""
     function_string = "def get_nth_prime_number(n: int) -> int:"
     args = ["10"]
     description_string = """Finds and returns the nth prime number."""
@@ -133,6 +138,7 @@ def test_4(model):
 
 # Ai function test 5
 def test_5(model):
+    """Encrypts the given text using a simple character substitution based on the provided key."""
     function_string = "def encrypt_text(text: str, key: str) -> str:"
     args = ["'Hello, World!'", "'abc123'"]
     description_string = """Encrypts the given text using a simple character substitution based on the provided key."""
@@ -147,6 +153,7 @@ def test_5(model):
 
 # Ai function test 6
 def test_6(model):
+    """Finds and returns a list of missing numbers in a given sorted list."""
     function_string = "def find_missing_numbers_in_list(numbers: list[int]) -> list[int]:"
     args = ["[3, 5, 8, 15, 16]"]
     description_string = """Finds and returns a list of missing numbers in a given sorted list."""
