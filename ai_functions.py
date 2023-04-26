@@ -34,6 +34,8 @@ def optimize_function(function, args, model="gpt-4"):
 
     # Extract the suggested optimizations from the GPT response
     optimized_code = response.choices[0]['message']['content']
+    print(
+        f"Here is the optimized function in terms of time and space complexity:\n{optimized_code}")
 
     # Compile the optimized function code into a function object
     optimized_function = None
