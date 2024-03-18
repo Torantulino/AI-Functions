@@ -3,7 +3,7 @@
 Example:
 
 ```python
-function = "def fake_people(n: int) -> list[dict]:"
+function_string = "def fake_people(n: int) -> list[dict]:"
 args = ["4"]
 description_string = """Generates n examples of fake data representing people, each with a name and an age."""
 
